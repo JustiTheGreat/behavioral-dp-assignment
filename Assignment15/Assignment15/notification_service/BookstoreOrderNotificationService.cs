@@ -29,7 +29,7 @@ namespace Assignment15.notification_service
 
         public void RemoveBookFromStock(string bookName)
         {
-            if (_booksInStock.Contains(bookName))
+            if (!_booksInStock.Contains(bookName))
             {
                 Console.WriteLine("Trying to remove a book not present in our stock!");
                 return;
